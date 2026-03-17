@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laputian — Support</title>
+  <style>
+    :root {
+      --bg: #f9f7f4;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666;
+      --accent: #4a7c59;
+      --border: #e8e4df;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 16px;
+    }
+    header {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header p {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 0.95rem;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 0 80px;
+    }
+    .lang-nav {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .lang-nav a {
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.85rem;
+      transition: all 0.15s;
+    }
+    .lang-nav a:hover, .lang-nav a.active {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    section {
+      margin-bottom: 48px;
+    }
+    section h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+    .faq-item h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .contact-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .contact-card a {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .contact-card a:hover { opacity: 0.9; }
+    footer {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 24px 0 48px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    footer a { color: var(--muted); }
+
+    /* Language sections */
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Laputian</h1>
+  <p>Support &amp; Help</p>
+</header>
+
+<main>
+  <nav class="lang-nav">
+    <a href="#" class="active" onclick="setLang('en', this); return false;">English</a>
+    <a href="#" onclick="setLang('ko', this); return false;">한국어</a>
+    <a href="#" onclick="setLang('ja', this); return false;">日本語</a>
+    <a href="#" onclick="setLang('fr', this); return false;">Français</a>
+  </nav>
+
+  <!-- English -->
+  <div class="lang-section active" id="lang-en">
+    <section>
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>What is an Anchor Event?</h3>
+        <p>An Anchor Event is the one thing you absolutely can't miss today — a meeting, appointment, or commitment. Laputian counts down to it, generates a preparation checklist, and celebrates when you complete it.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How does Place Learning work?</h3>
+        <p>Laputian quietly observes your location in the background and learns the places you visit regularly — your home, workplace, favorite café. All processing happens entirely on your device. Location data is never sent to external servers.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What data does Laputian send to the internet?</h3>
+        <p>Premium AI features send a small amount of context (your anchor event or routine description) to Anthropic's Claude API to generate suggestions. Your location, photos, and medication logs are never transmitted. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I back up and restore my data?</h3>
+        <p>Go to Settings → Backup &amp; Restore. Laputian automatically backs up to your personal iCloud Drive every time data changes. You can also create a manual backup or restore from a previous backup at any time.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What's included in the free version?</h3>
+        <p>Routines, snap check-ins, place learning, calendar integration, iCloud backup, home and lock screen widgets, and milestones — all free, forever.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What does Premium add?</h3>
+        <p>AI anchor suggestions, smart preparation checklists, personalized routine nudges, medication reports, and end-of-day encouragement. Includes a 7-day free trial.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is Laputian a medical device?</h3>
+        <p>No. Laputian is not a medical device. It does not diagnose, treat, or replace professional medical advice. Always consult a qualified healthcare provider regarding any medical questions.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Support</h2>
+      <div class="contact-card">
+        <p>Have a question not covered here? Found a bug? We'd love to hear from you.</p>
+        <a href="https://github.com/aumosita/laputian_support/issues/new" target="_blank">Open a Support Request</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- 한국어 -->
+  <div class="lang-section" id="lang-ko">
+    <section>
+      <h2>자주 묻는 질문</h2>
+
+      <div class="faq-item">
+        <h3>앵커 이벤트란 무엇인가요?</h3>
+        <p>앵커 이벤트는 오늘 절대 놓치면 안 되는 일정 하나입니다. 회의, 진료 예약, 중요한 약속 등을 설정하면 라퓨티언이 카운트다운하고, 준비사항을 정리하고, 완료하면 축하해줍니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>장소 학습은 어떻게 작동하나요?</h3>
+        <p>라퓨티언이 백그라운드에서 조용히 위치를 관찰하며 자주 방문하는 장소를 학습합니다. 모든 처리는 기기 내에서만 이루어지며, 위치 데이터는 외부 서버로 전송되지 않습니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>라퓨티언이 인터넷으로 보내는 데이터는 무엇인가요?</h3>
+        <p>프리미엄 AI 기능 사용 시, 앵커 이벤트나 루틴 설명 등 최소한의 맥락이 Anthropic의 Claude API로 전송됩니다. 위치, 사진, 투약 기록은 절대 전송되지 않습니다. 자세한 내용은 <a href="privacy.html">개인정보처리방침</a>을 참조하세요.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>데이터를 백업하고 복원하려면 어떻게 하나요?</h3>
+        <p>설정 → 백업 및 복원으로 이동하세요. 데이터가 변경될 때마다 개인 iCloud Drive에 자동으로 백업됩니다. 언제든 수동 백업을 만들거나 이전 백업에서 복원할 수 있습니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>무료 버전에 포함된 기능은 무엇인가요?</h3>
+        <p>루틴, 스냅 체크인, 장소 학습, 캘린더 연동, iCloud 백업, 홈화면·잠금화면 위젯, 마일스톤 — 모두 영구 무료입니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>프리미엄은 무엇이 추가되나요?</h3>
+        <p>AI 앵커 제안, 스마트 준비 체크리스트, 맞춤 루틴 넛지, 투약 보고서, 하루 마무리 격려 메시지. 7일 무료 체험이 포함됩니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>라퓨티언은 의료 기기인가요?</h3>
+        <p>아닙니다. 라퓨티언은 의료 기기가 아니며, 질병을 진단, 치료하거나 전문 의료 조언을 대체하지 않습니다. 의학적 질문은 항상 의료 전문가와 상담하세요.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>문의하기</h2>
+      <div class="contact-card">
+        <p>여기서 답을 찾지 못하셨나요? 버그를 발견하셨나요? 언제든 연락해 주세요.</p>
+        <a href="https://github.com/aumosita/laputian_support/issues/new" target="_blank">문의 남기기</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- 日本語 -->
+  <div class="lang-section" id="lang-ja">
+    <section>
+      <h2>よくある質問</h2>
+
+      <div class="faq-item">
+        <h3>アンカーイベントとは何ですか？</h3>
+        <p>アンカーイベントは、今日絶対に外せない予定を1つ選ぶ機能です。会議、診察、大切な約束などを設定すると、Laputianがカウントダウンし、準備リストを作り、達成したらお祝いします。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>場所学習はどのように動作しますか？</h3>
+        <p>Laputianはバックグラウンドで静かに位置情報を観察し、よく訪れる場所を学習します。すべての処理はデバイス上で行われ、位置データが外部サーバーに送信されることはありません。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>インターネットに送信されるデータは何ですか？</h3>
+        <p>プレミアムAI機能の使用時、アンカーイベントやルーティンの説明などの最小限のコンテキストがAnthropicのClaude APIに送信されます。位置情報、写真、服薬記録は送信されません。詳細は<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>データをバックアップ・復元するには？</h3>
+        <p>設定 → バックアップと復元に移動してください。データが変更されるたびに個人のiCloud Driveに自動的にバックアップされます。手動バックアップの作成や以前のバックアップからの復元もいつでも可能です。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Laputianは医療機器ですか？</h3>
+        <p>いいえ。Laputianは医療機器ではなく、疾病の診断・治療や専門的な医療アドバイスの代替を目的としていません。医学的な質問は必ず医療専門家にご相談ください。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>サポートへのお問い合わせ</h2>
+      <div class="contact-card">
+        <p>ここで解決できなかった場合や、バグを発見された場合はお気軽にご連絡ください。</p>
+        <a href="https://github.com/aumosita/laputian_support/issues/new" target="_blank">お問い合わせを送る</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Français -->
+  <div class="lang-section" id="lang-fr">
+    <section>
+      <h2>Questions fréquentes</h2>
+
+      <div class="faq-item">
+        <h3>Qu'est-ce qu'un Événement Ancre ?</h3>
+        <p>Un Événement Ancre est la seule chose que vous ne devez absolument pas manquer aujourd'hui. Laputian lance le compte à rebours, prépare une checklist et vous félicite lorsque c'est fait.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Comment fonctionne l'Apprentissage des Lieux ?</h3>
+        <p>Laputian observe discrètement votre localisation en arrière-plan et apprend les lieux que vous fréquentez régulièrement. Tout le traitement se fait entièrement sur votre appareil — les données de localisation ne sont jamais transmises à des serveurs externes.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Quelles données sont envoyées sur internet ?</h3>
+        <p>Les fonctionnalités IA Premium envoient un minimum de contexte (votre événement ancre ou description de routine) à l'API Claude d'Anthropic. Votre localisation, vos photos et vos données médicaments ne sont jamais transmises. Consultez notre <a href="privacy.html">Politique de confidentialité</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Comment sauvegarder et restaurer mes données ?</h3>
+        <p>Allez dans Paramètres → Sauvegarde et restauration. Laputian sauvegarde automatiquement dans votre iCloud Drive personnel à chaque modification. Vous pouvez aussi créer une sauvegarde manuelle ou restaurer à tout moment.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Laputian est-il un dispositif médical ?</h3>
+        <p>Non. Laputian n'est pas un dispositif médical. Il ne diagnostique pas, ne traite pas et ne remplace pas les conseils médicaux professionnels. Consultez toujours un professionnel de santé pour toute question médicale.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contacter le support</h2>
+      <div class="contact-card">
+        <p>Vous n'avez pas trouvé de réponse ? Vous avez découvert un bug ? Contactez-nous.</p>
+        <a href="https://github.com/aumosita/laputian_support/issues/new" target="_blank">Ouvrir une demande</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Aumosita. All rights reserved.</span>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  function setLang(lang, el) {
+    document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.lang-nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    el.classList.add('active');
+  }
+
+  // Auto-detect language
+  const userLang = navigator.language.slice(0, 2);
+  const map = { ko: 'ko', ja: 'ja', fr: 'fr' };
+  if (map[userLang]) {
+    const el = document.querySelector(`.lang-nav a[onclick*="'${map[userLang]}'"]`);
+    if (el) setLang(map[userLang], el);
+  }
+</script>
+
+</body>
+</html>
