@@ -124,4 +124,4 @@ Pour signaler un bug ou suggérer une fonctionnalité, ouvrez une **[nouvelle is
 
 ---
 
-© 2026 Aumosita
+© 2026 Yong Lee
