@@ -127,6 +127,14 @@
     <h3>Calendar and Reminders</h3>
     <p>Flapper reads your calendar and reminders to let you choose today's anchor event. This data is read locally and never transmitted externally.</p>
 
+    <h3>Focus Mode</h3>
+    <p>Flapper reads your iOS Focus Mode status (e.g., Work, Sleep, Personal) to adjust activity predictions and suppress non-urgent reminders. Focus Mode data is:</p>
+    <ul>
+      <li>Processed exclusively on-device</li>
+      <li>Never transmitted to external servers</li>
+      <li>Stored locally and backed up to your personal iCloud Drive</li>
+    </ul>
+
     <h2>3. AI Features and Third-Party Services</h2>
     <p><strong>Free users:</strong> No personal data leaves your device.</p>
     <p><strong>Premium users:</strong> AI features send context through a developer-operated proxy server (<code>adht-proxy.aumosita.workers.dev</code>) to <strong>Anthropic</strong>, an AI company (LLM provider). Yong Lee is not an AI company and does not have access to the content of your requests — Anthropic is the AI service provider. The proxy forwards requests without storing your data. Each AI feature sends only the context needed to generate its response:</p>
@@ -138,6 +146,7 @@
       <li>Learned place names (e.g., "Home", "Work") — <strong>not</strong> GPS coordinates</li>
       <li>Calendar event titles and times</li>
       <li>Conversation memory notes you have created</li>
+      <li>Current Focus Mode status (e.g., "Work", "Sleep")</li>
     </ul>
 
     <h3>Medication Report (Premium)</h3>
@@ -204,6 +213,14 @@
     <h3>캘린더 및 리마인더</h3>
     <p>오늘의 앵커 이벤트 선택을 위해 캘린더와 리마인더를 읽습니다. 이 데이터는 로컬에서만 읽히며 외부로 전송되지 않습니다.</p>
 
+    <h3>집중모드</h3>
+    <p>Flapper은 iOS 집중모드 상태(업무, 수면, 개인 등)를 읽어 활동 예측을 조정하고 긴급하지 않은 알림을 보류합니다. 집중모드 데이터는:</p>
+    <ul>
+      <li>기기 내에서만 처리됩니다</li>
+      <li>외부 서버로 전송되지 않습니다</li>
+      <li>기기에 로컬 저장되며 개인 iCloud Drive에 백업됩니다</li>
+    </ul>
+
     <h2>3. AI 기능 및 제3자 서비스</h2>
     <p><strong>무료 사용자:</strong> 개인정보가 기기 밖으로 전송되지 않습니다.</p>
     <p><strong>프리미엄 사용자:</strong> AI 기능은 개발자가 운영하는 프록시 서버(<code>adht-proxy.aumosita.workers.dev</code>)를 통해 LLM 제공 업체인 <strong>Anthropic(Claude API)</strong>으로 요청을 전달합니다. Yong Lee는 AI 회사가 아니며 요청 내용에 접근하지 않습니다 — AI 서비스는 Anthropic이 제공합니다. 프록시는 데이터를 저장하지 않고 요청을 중계하기만 합니다. 각 AI 기능은 응답 생성에 필요한 맥락만 전송합니다:</p>
@@ -215,6 +232,7 @@
       <li>학습된 장소 이름 (예: "집", "직장") — GPS 좌표는 <strong>포함되지 않음</strong></li>
       <li>캘린더 이벤트 제목과 시간</li>
       <li>사용자가 작성한 대화 메모리 내용</li>
+      <li>현재 집중모드 상태 (예: "업무", "수면")</li>
     </ul>
 
     <h3>AI 투약 보고서 (프리미엄)</h3>
@@ -275,6 +293,14 @@
     <h3>服薬・健康ノート</h3>
     <p>服薬記録、タグ、メモはSwiftDataでデバイスにローカル保存され、個人のiCloud Driveにバックアップされます。AI服薬レポート機能を使用した場合のみ外部に送信されます（第3項参照）。</p>
 
+    <h3>集中モード</h3>
+    <p>FlapperはiOSの集中モード状態（仕事、睡眠、パーソナルなど）を読み取り、アクティビティ予測を調整し、緊急でないリマインダーを保留します。集中モードのデータは：</p>
+    <ul>
+      <li>デバイス上でのみ処理されます</li>
+      <li>外部サーバーに送信されません</li>
+      <li>デバイスにローカル保存され、個人のiCloud Driveにバックアップされます</li>
+    </ul>
+
     <h2>3. AI機能とサードパーティサービス</h2>
     <p><strong>無料ユーザー：</strong>個人情報はデバイスの外に送信されません。</p>
     <p><strong>プレミアムユーザー：</strong>AI機能は、開発者が運営するプロキシサーバー（<code>adht-proxy.aumosita.workers.dev</code>）を通じて、LLMプロバイダーである<strong>Anthropic（Claude API）</strong>にリクエストを転送します。Yong LeeはAI会社ではなく、リクエストの内容にアクセスしません — AIサービスはAnthropicが提供しています。プロキシはデータを保存せずリクエストを中継するのみです。各AI機能は応答生成に必要なコンテキストのみを送信します：</p>
@@ -286,6 +312,7 @@
       <li>学習済みの場所名（例：「自宅」「職場」）— GPS座標は<strong>含まれません</strong></li>
       <li>カレンダーイベントのタイトルと時間</li>
       <li>ユーザーが作成した会話メモリの内容</li>
+      <li>現在の集中モード状態（例：「仕事」「睡眠」）</li>
     </ul>
 
     <h3>AI服薬レポート（プレミアム）</h3>
@@ -337,6 +364,14 @@
     <h3>Médicaments et notes de santé</h3>
     <p>Vos journaux de médicaments et notes sont stockés localement et sauvegardés dans votre iCloud Drive. Ils ne sont transmis à l'extérieur que lors de l'utilisation de la fonctionnalité Rapport médicament IA (voir section 3).</p>
 
+    <h3>Mode de concentration</h3>
+    <p>Flapper lit votre mode de concentration iOS (Travail, Sommeil, Personnel, etc.) pour ajuster les prédictions d'activités et suspendre les rappels non urgents. Les données du mode de concentration sont :</p>
+    <ul>
+      <li>Traitées entièrement sur votre appareil</li>
+      <li>Jamais transmises à des serveurs externes</li>
+      <li>Stockées localement et sauvegardées dans votre iCloud Drive personnel</li>
+    </ul>
+
     <h2>3. Fonctionnalités IA et services tiers</h2>
     <p><strong>Utilisateurs gratuits :</strong> Aucune donnée personnelle ne quitte votre appareil.</p>
     <p><strong>Utilisateurs Premium :</strong> Les fonctionnalités IA transmettent le contexte nécessaire via un serveur proxy du développeur (<code>adht-proxy.aumosita.workers.dev</code>) au <strong>fournisseur de LLM Anthropic (Claude API)</strong>. Le proxy relaie les requêtes sans stocker vos données. Yong Lee n'a pas accès au contenu de vos messages et n'est pas une société d'IA — Anthropic est le prestataire IA.</p>
@@ -348,6 +383,7 @@
       <li>Noms de lieux appris (ex. : « Domicile », « Travail ») — coordonnées GPS <strong>non incluses</strong></li>
       <li>Titres et horaires d'événements calendrier</li>
       <li>Notes de mémoire conversationnelle que vous avez créées</li>
+      <li>État actuel du mode de concentration (ex. : « Travail », « Sommeil »)</li>
     </ul>
 
     <h3>Rapport médicament IA (Premium)</h3>
