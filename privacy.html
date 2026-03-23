@@ -99,7 +99,7 @@
   <!-- English -->
   <div class="lang-section active" id="lang-en">
     <div class="highlight">
-      <p><strong>Summary:</strong> Flapper stores your data on your device and your personal iCloud. We do not run servers that store your personal data. <strong>Free users: no personal data ever leaves your device.</strong> Premium AI features send only the context needed for each response through a Yong Lee proxy to Anthropic — an AI provider (LLM) — not to Yong Lee.</p>
+      <p><strong>Summary:</strong> Flapper stores your data on your device and your personal iCloud. We do not run servers that store your personal data. <strong>Free users: no personal data ever leaves your device.</strong> Premium AI features send only the context needed for each response through a Yong Lee proxy to Anthropic (Claude API) — or Google (Gemini API) as a fallback — not to Yong Lee.</p>
     </div>
 
     <h2>1. Who We Are</h2>
@@ -137,7 +137,7 @@
 
     <h2>3. AI Features and Third-Party Services</h2>
     <p><strong>Free users:</strong> No personal data leaves your device.</p>
-    <p><strong>Premium users:</strong> AI features send context through a developer-operated proxy server (<code>adht-proxy.aumosita.workers.dev</code>) to <strong>Anthropic</strong>, an AI company (LLM provider). Yong Lee is not an AI company and does not have access to the content of your requests — Anthropic is the AI service provider. The proxy forwards requests without storing your data. Each AI feature sends only the context needed to generate its response:</p>
+    <p><strong>Premium users:</strong> AI features send context through a developer-operated proxy server (<code>adht-proxy.aumosita.workers.dev</code>) to <strong>Anthropic</strong> (Claude API), the primary AI provider. When Anthropic is temporarily unavailable, requests may be routed to <strong>Google</strong> (Gemini API) as a fallback. Yong Lee is not an AI company and does not have access to the content of your requests. The proxy forwards requests without storing your data. Both providers process data only to generate responses. Each AI feature sends only the context needed to generate its response:</p>
 
     <h3>Anchor Suggestions, Checklists, Nudges, End-of-Day Encouragement</h3>
     <ul>
@@ -156,7 +156,7 @@
       <li>Dose summaries (dates and times of logged doses)</li>
       <li>Effect and side-effect tags you have entered</li>
     </ul>
-    <p>GPS coordinates and photos are <strong>never</strong> included in any AI request. Anthropic's data handling is governed by <a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic's Privacy Policy</a>.</p>
+    <p>GPS coordinates and photos are <strong>never</strong> included in any AI request. Data handling is governed by <a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic's Privacy Policy</a> and <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Google's Gemini API Terms</a>.</p>
 
     <h2>4. iCloud Backup</h2>
     <p>When you enable backup, Flapper stores an encrypted backup file in your personal iCloud Drive container. This backup is accessible only to you and is subject to Apple's iCloud terms. Yong Lee cannot access your iCloud data.</p>
@@ -185,7 +185,7 @@
   <!-- 한국어 -->
   <div class="lang-section" id="lang-ko">
     <div class="highlight">
-      <p><strong>요약:</strong> Flapper은 데이터를 기기와 개인 iCloud에 저장합니다. 개인 데이터를 저장하는 서버를 운영하지 않습니다. <strong>무료 사용자는 개인정보가 기기 밖으로 나가지 않습니다.</strong> 프리미엄 AI 기능은 각 응답 생성에 필요한 맥락만을 Yong Lee 프록시를 통해 LLM 제공 업체인 Anthropic으로 전송합니다.</p>
+      <p><strong>요약:</strong> Flapper은 데이터를 기기와 개인 iCloud에 저장합니다. 개인 데이터를 저장하는 서버를 운영하지 않습니다. <strong>무료 사용자는 개인정보가 기기 밖으로 나가지 않습니다.</strong> 프리미엄 AI 기능은 각 응답 생성에 필요한 맥락만을 Yong Lee 프록시를 통해 Anthropic(Claude API) 또는 대체 업체인 Google(Gemini API)로 전송합니다.</p>
     </div>
 
     <h2>1. 서비스 제공자</h2>
@@ -223,7 +223,7 @@
 
     <h2>3. AI 기능 및 제3자 서비스</h2>
     <p><strong>무료 사용자:</strong> 개인정보가 기기 밖으로 전송되지 않습니다.</p>
-    <p><strong>프리미엄 사용자:</strong> AI 기능은 개발자가 운영하는 프록시 서버(<code>adht-proxy.aumosita.workers.dev</code>)를 통해 LLM 제공 업체인 <strong>Anthropic(Claude API)</strong>으로 요청을 전달합니다. Yong Lee는 AI 회사가 아니며 요청 내용에 접근하지 않습니다 — AI 서비스는 Anthropic이 제공합니다. 프록시는 데이터를 저장하지 않고 요청을 중계하기만 합니다. 각 AI 기능은 응답 생성에 필요한 맥락만 전송합니다:</p>
+    <p><strong>프리미엄 사용자:</strong> AI 기능은 개발자가 운영하는 프록시 서버(<code>adht-proxy.aumosita.workers.dev</code>)를 통해 주 AI 제공 업체인 <strong>Anthropic(Claude API)</strong>으로 요청을 전달합니다. Anthropic이 일시적으로 사용 불가능한 경우, <strong>Google(Gemini API)</strong>로 요청이 전환될 수 있습니다. Yong Lee는 AI 회사가 아니며 요청 내용에 접근하지 않습니다. 프록시는 데이터를 저장하지 않고 요청을 중계하기만 합니다. 두 업체 모두 응답 생성 목적으로만 데이터를 처리합니다. 각 AI 기능은 응답 생성에 필요한 맥락만 전송합니다:</p>
 
     <h3>앵커 제안, 체크리스트, 넛지, 하루 마무리 격려</h3>
     <ul>
@@ -242,7 +242,7 @@
       <li>복용 요약 (기록된 복용 날짜·시간)</li>
       <li>입력한 효과 및 부작용 태그</li>
     </ul>
-    <p>GPS 좌표와 사진은 어떤 AI 요청에도 <strong>포함되지 않습니다</strong>. Anthropic의 데이터 처리는 <a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic 개인정보처리방침</a>에 따릅니다.</p>
+    <p>GPS 좌표와 사진은 어떤 AI 요청에도 <strong>포함되지 않습니다</strong>. 데이터 처리는 <a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic 개인정보처리방침</a> 및 <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Google Gemini API 서비스 약관</a>에 따릅니다.</p>
 
     <h2>4. iCloud 백업</h2>
     <p>백업을 활성화하면 Flapper은 암호화된 백업 파일을 개인 iCloud Drive에 저장합니다. 이 백업은 본인만 접근할 수 있으며 Yong Lee는 접근할 수 없습니다.</p>
@@ -271,7 +271,7 @@
   <!-- 日本語 -->
   <div class="lang-section" id="lang-ja">
     <div class="highlight">
-      <p><strong>概要：</strong>Flapperはデータをデバイスと個人のiCloudに保存します。個人データを保存するサーバーは運営していません。<strong>無料ユーザーの個人情報はデバイスの外に出ません。</strong>プレミアムAI機能は、各応答の生成に必要なコンテキストのみをYong Leeのプロキシ経由でLLMプロバイダーであるAnthropicに送信します。</p>
+      <p><strong>概要：</strong>Flapperはデータをデバイスと個人のiCloudに保存します。個人データを保存するサーバーは運営していません。<strong>無料ユーザーの個人情報はデバイスの外に出ません。</strong>プレミアムAI機能は、各応答の生成に必要なコンテキストのみをYong Leeのプロキシ経由でAnthropic（Claude API）、または代替としてGoogle（Gemini API）に送信します。</p>
     </div>
 
     <h2>1. 運営者について</h2>
@@ -303,7 +303,7 @@
 
     <h2>3. AI機能とサードパーティサービス</h2>
     <p><strong>無料ユーザー：</strong>個人情報はデバイスの外に送信されません。</p>
-    <p><strong>プレミアムユーザー：</strong>AI機能は、開発者が運営するプロキシサーバー（<code>adht-proxy.aumosita.workers.dev</code>）を通じて、LLMプロバイダーである<strong>Anthropic（Claude API）</strong>にリクエストを転送します。Yong LeeはAI会社ではなく、リクエストの内容にアクセスしません — AIサービスはAnthropicが提供しています。プロキシはデータを保存せずリクエストを中継するのみです。各AI機能は応答生成に必要なコンテキストのみを送信します：</p>
+    <p><strong>プレミアムユーザー：</strong>AI機能は、開発者が運営するプロキシサーバー（<code>adht-proxy.aumosita.workers.dev</code>）を通じて、主要AIプロバイダーである<strong>Anthropic（Claude API）</strong>にリクエストを転送します。Anthropicが一時的に利用できない場合、<strong>Google（Gemini API）</strong>にリクエストが転送されることがあります。Yong LeeはAI会社ではなく、リクエストの内容にアクセスしません。プロキシはデータを保存せずリクエストを中継するのみです。両社とも応答生成の目的でのみデータを処理します。各AI機能は応答生成に必要なコンテキストのみを送信します：</p>
 
     <h3>アンカー提案・チェックリスト・ナッジ・一日の締めくくり</h3>
     <ul>
@@ -322,7 +322,7 @@
       <li>服薬サマリー（記録された服薬日時）</li>
       <li>入力した効果・副作用タグ</li>
     </ul>
-    <p>GPS座標と写真はいかなるAIリクエストにも<strong>含まれません</strong>。Anthropicのデータ取り扱いは<a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropicのプライバシーポリシー</a>に従います。</p>
+    <p>GPS座標と写真はいかなるAIリクエストにも<strong>含まれません</strong>。データの取り扱いは<a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropicのプライバシーポリシー</a>および<a href="https://ai.google.dev/gemini-api/terms" target="_blank">Google Gemini API利用規約</a>に従います。</p>
 
     <h2>4. iCloudバックアップ</h2>
     <p>バックアップを有効にすると、Flapperは暗号化されたバックアップファイルを個人のiCloud Driveに保存します。このバックアップにアクセスできるのはご本人のみで、Yong Leeはアクセスできません。</p>
@@ -342,7 +342,7 @@
   <!-- Français -->
   <div class="lang-section" id="lang-fr">
     <div class="highlight">
-      <p><strong>Résumé :</strong> Flapper stocke vos données sur votre appareil et votre iCloud personnel. Nous ne gérons pas de serveurs qui stockent vos données personnelles. <strong>Les utilisateurs gratuits ne transmettent aucune donnée à l'extérieur.</strong> Les fonctionnalités IA Premium envoient uniquement le contexte nécessaire à la génération de chaque réponse, via un proxy Yong Lee, au fournisseur de LLM Anthropic.</p>
+      <p><strong>Résumé :</strong> Flapper stocke vos données sur votre appareil et votre iCloud personnel. Nous ne gérons pas de serveurs qui stockent vos données personnelles. <strong>Les utilisateurs gratuits ne transmettent aucune donnée à l'extérieur.</strong> Les fonctionnalités IA Premium envoient uniquement le contexte nécessaire à la génération de chaque réponse, via un proxy Yong Lee, à Anthropic (Claude API) ou Google (Gemini API) en secours.</p>
     </div>
 
     <h2>1. Qui nous sommes</h2>
@@ -374,7 +374,7 @@
 
     <h2>3. Fonctionnalités IA et services tiers</h2>
     <p><strong>Utilisateurs gratuits :</strong> Aucune donnée personnelle ne quitte votre appareil.</p>
-    <p><strong>Utilisateurs Premium :</strong> Les fonctionnalités IA transmettent le contexte nécessaire via un serveur proxy du développeur (<code>adht-proxy.aumosita.workers.dev</code>) au <strong>fournisseur de LLM Anthropic (Claude API)</strong>. Le proxy relaie les requêtes sans stocker vos données. Yong Lee n'a pas accès au contenu de vos messages et n'est pas une société d'IA — Anthropic est le prestataire IA.</p>
+    <p><strong>Utilisateurs Premium :</strong> Les fonctionnalités IA transmettent le contexte nécessaire via un serveur proxy du développeur (<code>adht-proxy.aumosita.workers.dev</code>) au fournisseur principal <strong>Anthropic (Claude API)</strong>. Si Anthropic est temporairement indisponible, les requêtes peuvent être acheminées vers <strong>Google (Gemini API)</strong> en tant que solution de secours. Yong Lee n'a pas accès au contenu de vos messages et n'est pas une société d'IA. Le proxy relaie les requêtes sans stocker vos données. Les deux fournisseurs traitent les données uniquement pour générer des réponses.</p>
 
     <h3>Suggestions d'ancres, checklists, rappels, encouragements</h3>
     <ul>
@@ -393,7 +393,7 @@
       <li>Résumés de prises (dates et heures enregistrées)</li>
       <li>Tags d'effets et d'effets secondaires saisis</li>
     </ul>
-    <p>Les coordonnées GPS et les photos ne sont <strong>jamais</strong> incluses dans les requêtes IA. Le traitement des données par Anthropic est régi par la <a href="https://www.anthropic.com/legal/privacy" target="_blank">politique de confidentialité d'Anthropic</a>.</p>
+    <p>Les coordonnées GPS et les photos ne sont <strong>jamais</strong> incluses dans les requêtes IA. Le traitement des données est régi par la <a href="https://www.anthropic.com/legal/privacy" target="_blank">politique de confidentialité d'Anthropic</a> et les <a href="https://ai.google.dev/gemini-api/terms" target="_blank">conditions d'utilisation de l'API Gemini de Google</a>.</p>
 
     <h2>4. Ce que nous ne collectons pas</h2>
     <ul>
